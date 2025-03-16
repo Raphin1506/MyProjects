@@ -1,0 +1,35 @@
+import random
+
+def roletagem():
+    roletas = [
+        ("Humanos", 65),
+        ("Respiração da Água", 45),
+        ("Respiração do Trovão", 45),
+        ("Respiração da Besta", 40),
+        ("Respiração da Flor", 35),
+        ("Respiração do Inseto", 40),
+        ("Respiração da Serpente", 30),
+        ("Respiração do Vento", 25),
+        ("Respiração das Chamas", 30),
+        ("Respiração do Amor", 40),
+        ("Respiração da Pedra", 25),
+        ("Respiração do Som", 30),
+        ("Respiração da Névoa", 30),
+        ("Respiração do Sol", 3),
+        ("Respiração da Lua", 10),
+        ("Dança Hinokami Kagura", 15),
+        ("Sem respiração", 20),
+        ("Oni", 40),
+        ("Oni fora de controle", 25),
+        ("Lua Inferior", 10)
+    ]
+
+    roleta = []
+    for item, prob in roletas:
+        roleta.extend([item] * prob)
+
+    resultado = random.choice(roleta)
+    return resultado
+
+resultado = roletagem()
+print(f"Resultado da roletagem: {resultado}")
